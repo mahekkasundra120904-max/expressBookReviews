@@ -8,7 +8,6 @@ const public_users = express.Router();
 public_users.get('/', function (req, res) {
   return res.status(200).json(books);
 });
-
 // Get book details based on ISBN
 public_users.get('/isbn/:isbn', function (req, res) {
   const isbn = req.params.isbn;
