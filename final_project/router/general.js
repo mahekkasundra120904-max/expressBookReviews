@@ -39,5 +39,22 @@ public_users.get('/review/:isbn',function (req, res) {
   //Write your code here
   return res.status(300).json({message: "Yet to be implemented"});
 });
+const express = require('express');
+const public_users = express.Router();
+
+public_users.get('/books', function (req, res) {
+    res.json({
+        "1": {
+            "title": "Book 1",
+            "author": "Author 1",
+            "reviews": {}
+        },
+        "2": {
+            "title": "Book 2",
+            "author": "Author 2",
+            "reviews": {}
+        }
+    });
+});
 
 module.exports.general = public_users;
